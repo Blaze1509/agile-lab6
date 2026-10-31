@@ -7,9 +7,9 @@ jobs:
     runs-on:"ubuntu-Latest"
 
     steps:
-      - name:Checkout code
-        uses:actions/checkout@v4
-      - name:install node
-        uses:actions/setup-node@v4
-      - name:test code
-        run:node --test test.js
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Install node
+        uses: actions/setup-node@v4
+      - name: Test code
+        run: node --test test.js
