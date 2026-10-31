@@ -4,12 +4,14 @@ on: push
 
 jobs:
   test:
-    runs-on:"ubuntu-Latest"
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Install node
         uses: actions/setup-node@v4
+        with:
+          node-version: '20'
       - name: Test code
         run: node --test test.js
