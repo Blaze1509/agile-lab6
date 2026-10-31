@@ -1,0 +1,15 @@
+name: Test add cicd pipeline
+
+on: push
+
+jobs:
+  test:
+    runs-on:"ubuntu-Latest"
+
+    steps:
+      -name:Checkout code
+        uses:actions/checkout@v4
+      -name:install node
+        uses:setup-node@v4
+      -name:test code
+        run:node test.js
